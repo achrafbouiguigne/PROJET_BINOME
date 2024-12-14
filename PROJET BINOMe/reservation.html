@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Réservation</title>
+    <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Réserver un Terrain</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="historique.html">Historique des Réservations</a></li>
+            </ul>
+        </nav>
+        <a href="https://www.inpt.ac.ma/"><img src="/image/android-chrome-512x512.png" alt="Logo" class="header-image" ></a>
+    </header>
+    <main>
+        <form id="reservationForm">
+            <label for="terrain">Choisissez un terrain:</label>
+            <select id="terrain" required>
+                <option value="basketball">Basket-ball</option>
+                <option value="football">Football</option>
+                <option value="volleyball">Volley-ball</option>
+                <option value="9andahar">9andahar</option>
+            </select>
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            <label for="time">Heure:</label>
+            <input type="time" id="time" required>
+            <button type="submit">Réserver</button>
+        </form>
+        <img id="terrainPreview" src="" alt="Terrain" style="display: none; max-width: 100%; height: auto; border-radius: 10px;">
+
+        <section id="reservedSlots">
+            <h2>Créneaux Réservés</h2>
+            <ul id="slotsList"></ul>
+        </section>
+    </main>
+</body>
+</html>
